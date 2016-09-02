@@ -13,15 +13,8 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<script src="node_modules/jquery/dist/jquery.min.js"></script>
-		<script src="node_modules/slick-carousel/slick/slick.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="node_modules/slick-carousel/slick/slick.css"/>
 		<link rel="stylesheet" type="text/css" href="node_modules/slick-carousel/slick/slick-theme.css"/>
-		<script>
-		$(function() {
-			$('ref-carousel').slick();
-		})
-		</script>
 	</head>
 	<body>
 
@@ -183,6 +176,14 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+			<!-- <script src="node_modules/jquery/dist/jquery.min.js"></script> -->
+			<script src="node_modules/slick-carousel/slick/slick.js"></script>
+		<script>
+		$(function() {
+			var refs = $('.ref-carousel');
+			refs.slick();
+		})
+		</script>
 
 	</body>
 </html>

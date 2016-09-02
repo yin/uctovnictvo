@@ -1990,6 +1990,22 @@ button,
         width: 100%;
         margin: 0 0 2em 0 !important; } }
 
+/* Reference slideshow */
+.ref-carousel .ref {
+  background-color: white;
+  border-radius: 5px;
+  border: solid 2px rgba(255, 255, 255, 0.125);
+  margin-bottom: 2em;
+  padding: 1.5em; }
+  .ref-carousel .ref > :last-child,
+  .ref-carousel .ref > :last-child > :last-child,
+  .ref-carousel .ref > :last-child > :last-child > :last-child {
+    margin-bottom: 0; }
+  .ref-carousel .ref.alt {
+    border: 0;
+    border-radius: 0;
+    padding: 0; }
+
 /* Header */
 #header {
   -moz-transition: background-color 0.2s ease-in-out;
@@ -2228,7 +2244,8 @@ body.is-menu-visible #menu {
   padding: 10em 0 4.75em 0 ; }
   #banner .inner {
     margin: 0 auto;
-    width: 55em; }
+    width: 55em;
+    text-align: right; }
   #banner .logo {
     -moz-transition: opacity 2s ease, -moz-transform 1s ease;
     -webkit-transition: opacity 2s ease, -webkit-transform 1s ease;
@@ -2269,7 +2286,7 @@ body.is-menu-visible #menu {
     filter: blur(0);
     opacity: 1;
     border-bottom: solid 2px rgba(255, 255, 255, 0.125);
-    font-size: 2.25em;
+    font-size: 3.25em;
     margin-bottom: 0.8em;
     padding-bottom: 0.4em; }
   #banner p {
@@ -2291,7 +2308,7 @@ body.is-menu-visible #menu {
     filter: blur(0);
     opacity: 1;
     font-family: Raleway, Helvetica, sans-serif;
-    font-size: 1em;
+    font-size: 1.9em;
     font-weight: 200;
     letter-spacing: 0.1em;
     line-height: 2;
@@ -2609,12 +2626,13 @@ body.is-menu-visible #menu {
       #footer .inner .copyright li a {
         color: inherit; }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1680px) {
   #footer {
     background-color: #2e3141;
     background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.jpg");
     background-size: auto, cover;
     background-position: center, center;
+    background-attachment: fixed;
     margin-top: -6.5em;
     padding-top: 6.5em; } }
 

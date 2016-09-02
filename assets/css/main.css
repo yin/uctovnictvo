@@ -1992,11 +1992,16 @@ button,
 
 /* Reference slideshow */
 .ref-carousel .ref {
-  background-color: white;
+  /*			background-image: linear-gradient(to top, transparentize(_palette(bg), 0.2), 		transparentize(_palette(bg), 0.2));
+*/
   border-radius: 5px;
   border: solid 2px rgba(255, 255, 255, 0.125);
+  margin: 0.5em 5em 0.5em 5em;
   margin-bottom: 2em;
-  padding: 1.5em; }
+  padding: 1.5em;
+  width: 240px;
+  height: 160px;
+  text-align: center; }
   .ref-carousel .ref > :last-child,
   .ref-carousel .ref > :last-child > :last-child,
   .ref-carousel .ref > :last-child > :last-child > :last-child {
@@ -2317,6 +2322,7 @@ body.is-menu-visible #menu {
     #banner {
       padding: 7em 0 8.25em 0 ;
       background-color: #2e3141;
+      /* TODO yin: move to a lib and @include everywhere */
       background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.jpg");
       background-size: auto, cover;
       background-position: center, center;
@@ -2498,6 +2504,17 @@ body.is-menu-visible #menu {
       .wrapper.spotlight .image img {
         border-radius: 100%;
         width: 100%; }
+    .wrapper.spotlight .ideogram {
+      border-radius: 100%;
+      margin: 0 3em 2em 2em;
+      width: 10em;
+      overflow: visible;
+      -ms-flex: 1;
+      text-align: center; }
+      .wrapper.spotlight .ideogram i {
+        border-radius: 100%;
+        width: 100%;
+        font-size: 10em; }
     .wrapper.spotlight .content {
       width: 100%;
       -ms-flex: 2; }
@@ -2575,7 +2592,13 @@ body.is-menu-visible #menu {
     .wrapper.spotlight .image {
       margin: 0 0 1em 0 !important;
       max-width: 85%;
-      width: 12em; } }
+      width: 12em; }
+    .wrapper.spotlight .ideogram {
+      margin: 0 0 1em 0 !important;
+      max-width: 85%;
+      width: 5em; }
+      .wrapper.spotlight .ideogram i {
+        font-size: 5em; } }
   @media screen and (max-width: 360px) {
     .wrapper .inner {
       padding: 2em 1.5em 0.1em 1.5em ; } }

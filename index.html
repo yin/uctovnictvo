@@ -58,6 +58,8 @@
 								<div class="ref">Ref #1</div>
 								<div class="ref">Ref #2</div>
 								<div class="ref">Ref #3</div>
+								<div class="ref">Ref #4</div>
+								<div class="ref">Ref #5</div>
 							</div>
 						</div>
 					</section>
@@ -68,7 +70,10 @@
 						<!-- One -->
 							<section id="one" class="wrapper spotlight style1">
 								<div class="inner">
-									<a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
+									<div class="ideogram">
+										<i class="fa fa-universal-access" aria-hidden="true"></i>
+									</div>
+
 									<div class="content">
 										<p>Zakony, vyhlasky, paragrafy sa menia, ale MY s Vami kracame dalej. Tak tento rok uz nechajte svoje stlpce za dverami nasej kancelarie bez obav. Neztracajte cas tam, kde Vam pomozu iny.</p>
 										<a href="#" class="special">Poskytujeme...</a>
@@ -79,7 +84,9 @@
 						<!-- Two -->
 							<section id="two" class="wrapper alt spotlight style2">
 								<div class="inner">
-									<a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
+									<div class="ideogram">
+										<i class="fa fa-clock-o" aria-hidden="true"></i>
+									</div>
 									<div class="content">
 										<a href="#" class="special">Viac...</a>
 									</div>
@@ -89,7 +96,9 @@
 						<!-- Three -->
 							<section id="three" class="wrapper spotlight style3">
 								<div class="inner">
-									<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
+									<div class="ideogram">
+										<i class="fa fa-map-marker" aria-hidden="true"></i>
+									</div>
 									<div class="content">
 										<h2 class="major">Vedenie uctovnictva v zahranici</h2>
 										<p>Schcete podnikat na Slovensku? Potrebujete viest ucto0vnictvo? Bla bla... prva cena, sme tu pre Vas!</p>
@@ -185,7 +194,20 @@
 		<script>
 		$(function() {
 			var refs = $('.ref-carousel');
-			refs.slick();
+			refs.slick({
+			  dots: true,
+			  infinite: false,
+			  speed: 300,
+			  autoplay: true,
+  			  autoplaySpeed: 5000,
+
+			  dots: true,
+			  infinite: true,
+			  speed: 300,
+			  slidesToShow: 1,
+			  centerMode: true,
+			  variableWidth: true,
+			});
 		})
 		</script>
 

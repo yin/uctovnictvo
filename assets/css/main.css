@@ -1992,16 +1992,25 @@ button,
 
 /* Reference slideshow */
 .ref-carousel .ref {
-  /*			background-image: linear-gradient(to top, transparentize(_palette(bg), 0.2), 		transparentize(_palette(bg), 0.2));
-*/
   border-radius: 5px;
   border: solid 2px rgba(255, 255, 255, 0.125);
-  margin: 0.5em 5em 0.5em 5em;
+  margin: 0.5em 2em 0.5em 2em;
   margin-bottom: 2em;
   padding: 1.5em;
-  width: 240px;
-  height: 160px;
-  text-align: center; }
+  text-align: center;
+  text-style: italics; }
+  @media screen and (max-width: 1680px) {
+    .ref-carousel .ref {
+      width: 240px;
+      height: 160px; } }
+  @media screen and (max-width: 736px) {
+    .ref-carousel .ref {
+      width: 180px;
+      height: 120px; } }
+  @media screen and (max-width: 640px) {
+    .ref-carousel .ref {
+      width: 120px;
+      height: 80px; } }
   .ref-carousel .ref > :last-child,
   .ref-carousel .ref > :last-child > :last-child,
   .ref-carousel .ref > :last-child > :last-child > :last-child {

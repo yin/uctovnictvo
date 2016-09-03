@@ -2020,6 +2020,10 @@ button,
     border-radius: 0;
     padding: 0; }
 
+.jBox-content,
+.jBox-content h2 {
+  color: #303030 !important; }
+
 /* Header */
 #header {
   -moz-transition: background-color 0.2s ease-in-out;

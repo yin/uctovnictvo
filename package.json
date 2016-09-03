@@ -7,8 +7,10 @@
     "slick-carousel": "^1.6.0"
   },
   "scripts": {
+    "start": "lite-server",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-css": "node-sass assets/cscc assets/css"
+    "build-css": "node-sass assets/cscc assets/css",
+    "watch-css": "node ./node_modules/nodemon/bin/nodemon.js -e assets/sass/ -x './node_modules/node-sass/bin/node-sass assets/sass/main.scss assets/css/main.css"
   },
   "repository": {
     "type": "git",
@@ -21,6 +23,7 @@
   },
   "homepage": "https://github.com/yin/uctovnictvo#readme",
   "devDependencies": {
+    "lite-server": "^2.2.2",
     "node-sass": "^3.8.0"
   }
 }

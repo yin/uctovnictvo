@@ -1998,11 +1998,9 @@ button,
   margin-bottom: 2em;
   padding: 1.5em;
   text-align: center;
-  text-style: italics; }
-  @media screen and (max-width: 1680px) {
-    .ref-carousel .ref {
-      width: 240px;
-      height: 160px; } }
+  text-style: italics;
+  width: 240px;
+  height: 160px; }
   @media screen and (max-width: 736px) {
     .ref-carousel .ref {
       width: 180px;

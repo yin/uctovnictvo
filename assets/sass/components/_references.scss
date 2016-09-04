@@ -14,11 +14,8 @@
 
 			text-align: center;
 			text-style: italics;
-
-			@include breakpoint(xlarge) { 
-				width: 240px;
-				height: 160px;
-			}
+			width: 240px;
+			height: 160px;
 
 			@include breakpoint(small) {
 				width: 180px;

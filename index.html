@@ -146,7 +146,7 @@
 					<section id="footer">
 						<div class="inner">
 							<h2 class="major">Kontaktujte nas</h2>
-							<form method="post" action="#">
+							<form id="contact-form" method="post" action="https://formspree.io/yinotaurus@gmail.com">
 								<div class="field">
 									<label for="name">Meno a Priezvisko</label>
 									<input type="text" name="name" id="name" />
@@ -232,8 +232,51 @@
 			  content: '<h2>Curricullum</h2>'
 
 			});
+
+			$('#contact-form')
+				.submit(function(event) {
+					event.preventDefault()
+
+					$.ajax({
+						type: "POST",
+						url: this.action,
+						data: $(this).serialize(),
+						dataType:"json"
+					}).done(function(data) {
+						new jBox('Notice', {
+							animation: 'flip',
+							position: {
+								x: 'center',
+								y: 'center'
+							},
+							content: $('#template-contacts-success').html(),
+							color: 'green',
+							zIndex: 1200
+						});
+					}).fail(function(err) {
+						new jBox('Notice', {
+							animation: 'flip',
+							position: {
+								x: 'center',
+								y: 'center'
+							},
+							content: $('#template-contacts-fail').html(),
+							color: 'red',
+							zIndex: 1200
+						});
+					})
+				})
 		})
 		</script>
 
+		<script type="text/html" id="template-contacts-success">
+			<h1>Sprava bola odoslana</h1>
+			<p>Vas e-mail bol odoslany na nasu e-mailovu adresu. Odpovieme Vam co najskor.</p>
+		</script>
+
+		<script type="text/html" id="template-contacts-fail">
+			<h1>Nastala chyba!</h1>
+			<p>Pri zasielani Vaseho e-mailu doslo k chybe. Vyplnte vsetky polia formulara, alebo spravu oppakujte o 24 hodin.</p>
+		</script>
 	</body>
 </html>
